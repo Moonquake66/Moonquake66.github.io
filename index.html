@@ -123,16 +123,16 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -149,6 +149,222 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/25/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8Ashell%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/GBcAqAQaMAACZ27(1).jpg">
+      <meta itemprop="name" content="yolo_yi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yolo_yi' s blog">
+      <meta itemprop="description" content="不会飞的猪，就只是猪而已">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | yolo_yi' s blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/25/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8Ashell%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">'linux基础命令及shell使用'</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-12-25 14:01:02" itemprop="dateCreated datePublished" datetime="2024-12-25T14:01:02+08:00">2024-12-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-12-26 11:01:03" itemprop="dateModified" datetime="2024-12-26T11:01:03+08:00">2024-12-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术.</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="linux基础命令及shell使用"><a href="#linux基础命令及shell使用" class="headerlink" title="linux基础命令及shell使用"></a>linux基础命令及shell使用</h1><h2 id="1-文件和目录操作命令"><a href="#1-文件和目录操作命令" class="headerlink" title="1.文件和目录操作命令"></a>1.文件和目录操作命令</h2><h3 id="1-1-ls命令"><a href="#1-1-ls命令" class="headerlink" title="1.1 ls命令"></a>1.1 ls命令</h3><p>用于列出目录的内容，包括文件和子目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l     <span class="comment">##以长格式显示文件和目录的详细信息,如文件类型、权限、硬链接数、所有者、组、大小、修改日期和文件名。</span></span><br><span class="line">   			“-” 表示普通文件，“d” 表示目录，“l” 表示符号链接</span><br><span class="line"><span class="built_in">ls</span> -a     <span class="comment">##显示所有文件，包括以 “.” 开头的隐藏文件</span></span><br><span class="line"><span class="built_in">ls</span> -h     <span class="comment">##与-l一起使用时，以人类可读的格式显示文件大小，如将字节数转换为 KB、MB、GB 等。</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\software\Moonquake66\Moonquake66\source_posts\linux基础命令及shell使用.assets\image-20241225141506643.png" alt="image-20241225141506643"></p>
+<h3 id="1-2-cd命令（用于切换当前工作目录）"><a href="#1-2-cd命令（用于切换当前工作目录）" class="headerlink" title="1.2  cd命令（用于切换当前工作目录）"></a>1.2  cd命令（用于切换当前工作目录）</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/user  ##进入当前路径下的目录</span><br><span class="line">cd ..          ##返回上一级目录</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-3-pwd命令"><a href="#1-3-pwd命令" class="headerlink" title="1.3 pwd命令"></a>1.3 pwd命令</h3><p>打印当前工作目录的绝对路径。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@cp-service1-web1 test]# pwd</span><br><span class="line">/root/test</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-mkdir命令"><a href="#1-4-mkdir命令" class="headerlink" title="1.4  mkdir命令"></a>1.4  mkdir命令</h3><p>用于创建新的目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir project          ##创建一个名为project的新目录</span><br><span class="line">mkdir -p a/b/c 		   ##如果a和b目录不存在，会先创建a和b目录，然后在b目录下创建c目录。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-5-rmdir命令"><a href="#1-5-rmdir命令" class="headerlink" title="1.5 rmdir命令"></a>1.5 rmdir命令</h3><p>用于删除空目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rmdir test</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 会删除名为test空目录。如果目录非空，则会提示错误，需要先删除目录中的文件才能删除目录。</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-6-rm命令"><a href="#1-6-rm命令" class="headerlink" title="1.6 rm命令"></a>1.6 rm命令</h3><p>用于删除文件或目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -r   ##用于删除目录及其内容。会删除目录及其内部的所有文件和子目录</span><br><span class="line">rm -f   ##强制删除，不提示确认.即使文件是只读的也会强制删除</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-7-CP命令"><a href="#1-7-CP命令" class="headerlink" title="1.7 CP命令"></a>1.7 CP命令</h3><p>用于复制文件和目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp -r source destin  ##用于复制目录及其内容。例如：cp -r source_folder destination_folder会将source_folder目录及其内部的所有文件和子目录复制到destination_folder。如果destination_folder不存在，会创建该目录。</span><br><span class="line">cp -p file1 file2    ####保留文件的属性，如权限、所有者、时间戳等.例如：cp -p file1 file2会复制file1为file2，并且file2会保留file1的属性。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-8-mv命令"><a href="#1-8-mv命令" class="headerlink" title="1.8 mv命令"></a>1.8 mv命令</h3><p>用于移动或重命名文件和目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv file1 new_location/file1：将file1移动到new_location目录下。</span><br><span class="line">mv old_name new_name：将文件或目录从old_name重命名为new_name。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-文件查看和编辑命令"><a href="#2-文件查看和编辑命令" class="headerlink" title="2.文件查看和编辑命令"></a>2.<strong>文件查看和编辑命令</strong></h2><h3 id="2-1-cat命令"><a href="#2-1-cat命令" class="headerlink" title="2.1  cat命令"></a>2.1  cat命令</h3><p>用于查看文件内容、连接文件并输出到标准输出。</p>
+<h3 id="2-2-less命令"><a href="#2-2-less命令" class="headerlink" title="2.2 less命令"></a>2.2 less命令</h3><p>用于分页查看文件内容，比<code>cat</code>命令更灵活，适合查看大型文件。</p>
+<h3 id="2-3-head命令"><a href="#2-3-head命令" class="headerlink" title="2.3 head命令"></a>2.3 head命令</h3><p>用于查看文件的开头部分内容。</p>
+<h3 id="2-4-tail命令"><a href="#2-4-tail命令" class="headerlink" title="2.4 tail命令"></a>2.4 tail命令</h3><p>用于查看文件的结尾部分内容。</p>
+<h2 id="3-系统信息和进程管理命令"><a href="#3-系统信息和进程管理命令" class="headerlink" title="3.系统信息和进程管理命令"></a>3.系统信息和进程管理命令</h2><h3 id="3-1-uname命令"><a href="#3-1-uname命令" class="headerlink" title="3.1 uname命令"></a>3.1 uname命令</h3><p>用于打印系统信息。</p>
+<p><code>-a</code>：打印所有系统信息，包括内核名称、主机名、内核版本、硬件平台等。<img src="/assets/image-20241225161827245.png" alt="image-20241225161827245"></p>
+<h3 id="3-2-top命令"><a href="#3-2-top命令" class="headerlink" title="3.2 top命令"></a>3.2 top命令</h3><p>动态显示系统中各个进程的资源占用情况，如 CPU 使用率、内存使用率等。</p>
+<p>按下 “q” 键退出<code>top</code>命令。</p>
+<p><img src="/assets/image-20241225162200919.png" alt="image-20241225162200919"></p>
+<h3 id="3-3-ps命令"><a href="#3-3-ps命令" class="headerlink" title="3.3  ps命令"></a>3.3  ps命令</h3><p>用于查看当前系统中的进程状态。</p>
+<p><code>-ef</code>：显示所有进程的详细信息，包括进程 ID（PID）、父进程 ID（PPID）、用户、CPU 使用率等。</p>
+<p><img src="/assets/image-20241225165332878.png" alt="image-20241225165332878"></p>
+<h3 id="3-4-kill命令"><a href="#3-4-kill命令" class="headerlink" title="3.4  kill命令"></a>3.4  kill命令</h3><p>用于终止进程。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kill PID</span><br><span class="line">kill -9 PID（-9表示强制终止）</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-用户和权限管理命令"><a href="#4-用户和权限管理命令" class="headerlink" title="4.用户和权限管理命令"></a>4.用户和权限管理命令</h2><h3 id="4-1"><a href="#4-1" class="headerlink" title="4.1"></a>4.1</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/30/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E4%BA%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/GBcAqAQaMAACZ27(1).jpg">
+      <meta itemprop="name" content="yolo_yi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yolo_yi' s blog">
+      <meta itemprop="description" content="不会飞的猪，就只是猪而已">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | yolo_yi' s blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/11/30/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E4%BA%91/" class="post-title-link" itemprop="url">博客迁移至云</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-11-30 10:28:59 / Modified: 10:35:51" itemprop="dateCreated datePublished" datetime="2024-11-30T10:28:59+08:00">2024-11-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="博客迁移至云"><a href="#博客迁移至云" class="headerlink" title="博客迁移至云"></a>博客迁移至云</h1><p>之前在本地部署了博客</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -242,6 +458,119 @@
 
 <p>可看出现在又启动了一个pod，流量被分发到这个新版本的pod，查看服务是否出错，没有问题将之前的两个pod的镜像都替换成新版本，然后再关闭之前灰度发布的pod将所有的流量全部分发到这两个pod中。</p>
 
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/20/OpenResty/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/GBcAqAQaMAACZ27(1).jpg">
+      <meta itemprop="name" content="yolo_yi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yolo_yi' s blog">
+      <meta itemprop="description" content="不会飞的猪，就只是猪而已">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | yolo_yi' s blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/11/20/OpenResty/" class="post-title-link" itemprop="url">OpenResty</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-11-20 23:48:54" itemprop="dateCreated datePublished" datetime="2024-11-20T23:48:54+08:00">2024-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-11-22 12:53:49" itemprop="dateModified" datetime="2024-11-22T12:53:49+08:00">2024-11-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>nginx普通版的流程</p>
+<p>之前用户访问应用服务器的时候流程应该是这样：用户通过浏览器访问，浏览器找到nginx负载均衡服务器，然后再找到应用服务器，应用服务器调用数据库中的数据返回结果。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/35590557/1681434603604-1a35100a-71b0-4cfa-b8a3-183cd3272771.png" alt="img"></p>
+<p>nginx升级版流程</p>
+<p>使用nginx升级版,当用户调用访问时，不用再经过应用服务器直接访问后端。例如数据库、</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/35590557/1681436745523-e3a8b7ee-68fb-4bf9-989e-2cc15a92fad9.png" alt="img"></p>
+<h2 id="OpenResty介绍"><a href="#OpenResty介绍" class="headerlink" title="OpenResty介绍"></a>OpenResty介绍</h2><p><img src="https://cdn.nlark.com/yuque/0/2023/png/35590557/1689563773835-046ec213-d14d-4000-b294-7b9d9e4eb0de.png" alt="img"></p>
+<p>简单的说uaOpenResty&#x3D;nginx+LuaJIT ,它集成了我们的 <a target="_blank" rel="noopener" href="http://openresty.org/en/nginx.html">Nginx</a>核心的增强版,我们的<a target="_blank" rel="noopener" href="https://github.com/openresty/luajit2">LuaJIT</a>增强版，许多精心编写的Lua 库，许多高质量的<a target="_blank" rel="noopener" href="http://openresty.org/en/components.html">第三方Nginx模块</a>，以及 他们的大多数外部依赖关系。</p>
+<p>就是在原本普通版本的nginx的基础上将lua脚本与之结合。Web 开发人员可以使用 Lua 脚本语言调动 Nginx 支持的各种 C 以及 Lua 模块,更主要的是在性能方面，OpenResty可以 快速构造出足以胜任 10K 以上并发连接响应的超高性能 Web 应用系统。</p>
+<p>OpenResty® 的目标是让你的Web服务直接跑在 <a target="_blank" rel="noopener" href="http://openresty.org/cn/nginx.html">Nginx</a> 服务内部，充分利用 <a target="_blank" rel="noopener" href="http://openresty.org/cn/nginx.html">Nginx</a> 的非阻塞 I&#x2F;O 模型，不仅仅对 HTTP 客户端请求,甚至于对远程后端诸如 MySQL、PostgreSQL、Memcached 以及 Redis 等都进行一致的高性能响应。</p>
+<h2 id="OpenResty-解决的痛点"><a href="#OpenResty-解决的痛点" class="headerlink" title="OpenResty 解决的痛点"></a>OpenResty 解决的痛点</h2><p>OpenResty解决的是<strong>高并发****问题</strong></p>
+<p>目前服务器的类型：</p>
+<p>1.apache并发量不堪200-300</p>
+<p>2.tomcat方宣称的并发量是1000</p>
+<p>3.weblogic并发量平均能达到3000左右</p>
+<h2 id="nginx-openresty对比"><a href="#nginx-openresty对比" class="headerlink" title="nginx &amp; openresty对比"></a>nginx &amp; openresty对比</h2><h2 id="openrestry的组件"><a href="#openrestry的组件" class="headerlink" title="openrestry的组件"></a>openrestry的组件</h2><p>相关组件：<a target="_blank" rel="noopener" href="https://openresty.org/cn/components.html">https://openresty.org/cn/components.html</a></p>
+<h2 id="安装openrestry"><a href="#安装openrestry" class="headerlink" title="安装openrestry"></a>安装openrestry</h2><p>官网：<a target="_blank" rel="noopener" href="https://openresty.org/cn/linux-packages.html#centos">https://openresty.org/cn/linux-packages.html#centos</a></p>
+<h3 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h3><h3 id="yum安装"><a href="#yum安装" class="headerlink" title="yum安装"></a>yum安装</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">.添加openresty的yum源</span></span><br><span class="line">[<span class="string">root@VM-4-9-opencloudos</span> <span class="string">~</span>]<span class="comment"># cd /etc/yum.repos.d/</span></span><br><span class="line">[<span class="string">root@VM-4-9-opencloudos</span> <span class="string">yum.repos.d</span>]<span class="comment"># ls</span></span><br><span class="line"><span class="string">OpenCloudOS-Debuginfo.repo</span>  <span class="string">OpenCloudOS.repo</span>  <span class="string">OpenCloudOS-Sources.repo</span>  <span class="string">openresty.repo</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">2</span><span class="string">.安装openresty包和依赖</span></span><br><span class="line">[<span class="string">root@VM-4-9-opencloudos</span> <span class="string">yum.repos.d</span>]<span class="comment"># yum -y install pcre-devel openssl-devel gcc curl</span></span><br><span class="line">[<span class="string">root@VM-4-9-opencloudos</span> <span class="string">yum.repos.d</span>]<span class="comment"># yum -y install openresty</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">3</span><span class="string">.启动openresty</span></span><br><span class="line">[<span class="string">root@VM-4-9-opencloudos</span> <span class="string">~</span>]<span class="comment"># systemctl start openresty</span></span><br><span class="line">[<span class="string">root@VM-4-9-opencloudos</span> <span class="string">~</span>]<span class="comment"># systemctl status openresty</span></span><br><span class="line"></span><br><span class="line"><span class="number">4</span><span class="string">.防火墙要关闭</span></span><br></pre></td></tr></table></figure>
+
+<p>5.确认 OpenResty 是否正常工作。在 Web 浏览器中访问服务器的 IP 地址或域名，应该能够看到 OpenResty 的默认欢迎页面。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2023/png/35590557/1692774279522-a693184a-3e94-45aa-b930-319708bc493f.png" alt="img"></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">OpenResty的网页文件目录：</span></span><br><span class="line"><span class="string">/usr/local/openresty/nginx/html</span></span><br><span class="line"></span><br><span class="line"><span class="string">OpenResty的日志文件目录：</span></span><br><span class="line"><span class="string">/usr/local/openresty/nginx/logs</span></span><br><span class="line"></span><br><span class="line"><span class="string">OpenResty的配置文件目录：</span></span><br><span class="line"><span class="string">/usr/local/openresty/nginx/conf</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="K8S安装"><a href="#K8S安装" class="headerlink" title="K8S安装"></a>K8S安装</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span>   <span class="comment">##表示创建一个部署</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">2</span>   <span class="comment">##需要运行的实例（pod）数量，填1</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">tolerations:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">key:</span> <span class="string">node.kubernetes.io/unschedulable</span></span><br><span class="line">        <span class="attr">operator:</span> <span class="string">Exists</span></span><br><span class="line">        <span class="attr">effect:</span> <span class="string">NoSchedule</span></span><br><span class="line">      <span class="attr">nodeSelector:</span></span><br><span class="line">        <span class="attr">profile:</span> <span class="string">nginx</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span>   <span class="comment">##容器名字</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">harbor.starcharge.com/devops/openresty:2.0</span>  <span class="comment">##这里必须指定tag号，而且禁止使用latest，否则可能会导致运行了其他版本</span></span><br><span class="line">        <span class="attr">imagePullPolicy:</span> <span class="string">Always</span>  <span class="comment">##每次执行都重新拉取镜像</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">80</span>   <span class="comment">##项目端口号</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">443</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">8080</span>    </span><br><span class="line">        <span class="attr">volumeMounts:</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">tz-config</span></span><br><span class="line">            <span class="attr">mountPath:</span> <span class="string">/etc/localtime</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">openresty-conf</span></span><br><span class="line">            <span class="attr">mountPath:</span> <span class="string">/usr/local/openresty/nginx/conf</span></span><br><span class="line">      <span class="attr">imagePullSecrets:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">docker-secret-new</span>  <span class="comment">##docker私有仓库的密钥</span></span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">tz-config</span></span><br><span class="line">        <span class="attr">hostPath:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">/etc/localtime</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">openresty-conf</span></span><br><span class="line">        <span class="attr">hostPath:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">/starcharge/openresty-k8s</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span>  <span class="comment">##表示创建一个服务，对外暴露刚刚创建的应用的端口，使之可以被外部访问</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">annotations:</span></span><br><span class="line">    <span class="attr">service.beta.kubernetes.io/alibaba-cloud-loadbalancer-id:</span> <span class="string">&quot;lb-bp1x8g7ajhcp668l4zt0f&quot;</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx</span> <span class="comment">##服务名（同项目名）</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">nginx</span>   <span class="comment">##同项目名</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">LoadBalancer</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">nginx</span> <span class="comment">##上面Deployment的名字，同项目名即可</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">80</span> <span class="comment">##pod暴露的端口号</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">80</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="start"><a href="#start" class="headerlink" title="start"></a>start</h2>
       
     </div>
 

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="linux基础命令及shell使用1.文件和目录操作命令1.1 ls命令用于列出目录的内容，包括文件和子目录。 1234ls -l     ##以长格式显示文件和目录的详细信息,如文件类型、权限、硬链接数、所有者、组、大小、修改日期和文件名。   			“-” 表示普通文件，“d” 表示目录，“l” 表示符号链接ls -a     ##显示所有文件，包括以 “.” 开头的隐藏文件ls -h">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="&#39;linux基础命令及shell使用&#39;">
+<meta property="og:url" content="http://example.com/2024/12/25/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8Ashell%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="yolo_yi&#39; s blog">
+<meta property="og:description" content="linux基础命令及shell使用1.文件和目录操作命令1.1 ls命令用于列出目录的内容，包括文件和子目录。 1234ls -l     ##以长格式显示文件和目录的详细信息,如文件类型、权限、硬链接数、所有者、组、大小、修改日期和文件名。   			“-” 表示普通文件，“d” 表示目录，“l” 表示符号链接ls -a     ##显示所有文件，包括以 “.” 开头的隐藏文件ls -h">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="d:\software\Moonquake66\Moonquake66\source_posts\linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8Ashell%E4%BD%BF%E7%94%A8.assets\image-20241225141506643.png">
+<meta property="og:image" content="http://example.com/assets/image-20241225161827245.png">
+<meta property="og:image" content="http://example.com/assets/image-20241225162200919.png">
+<meta property="og:image" content="http://example.com/assets/image-20241225165332878.png">
+<meta property="article:published_time" content="2024-12-25T06:01:02.000Z">
+<meta property="article:modified_time" content="2024-12-26T03:01:03.607Z">
+<meta property="article:author" content="yolo_yi">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="shell">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:\software\Moonquake66\Moonquake66\source_posts\linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8Ashell%E4%BD%BF%E7%94%A8.assets\image-20241225141506643.png">
+
+
+<link rel="canonical" href="http://example.com/2024/12/25/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8Ashell%E4%BD%BF%E7%94%A8/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/12/25/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8Ashell%E4%BD%BF%E7%94%A8/","path":"2024/12/25/linux基础命令及shell使用/","title":"'linux基础命令及shell使用'"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>'linux基础命令及shell使用' | yolo_yi' s blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">yolo_yi' s blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8Ashell%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">linux基础命令及shell使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.</span> <span class="nav-text">1.文件和目录操作命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-ls%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 ls命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-cd%E5%91%BD%E4%BB%A4%EF%BC%88%E7%94%A8%E4%BA%8E%E5%88%87%E6%8D%A2%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%EF%BC%89"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2  cd命令（用于切换当前工作目录）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-pwd%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 pwd命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-mkdir%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.4  mkdir命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-rmdir%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.5.</span> <span class="nav-text">1.5 rmdir命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-rm%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.6.</span> <span class="nav-text">1.6 rm命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-CP%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.7.</span> <span class="nav-text">1.7 CP命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-mv%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.8.</span> <span class="nav-text">1.8 mv命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%96%87%E4%BB%B6%E6%9F%A5%E7%9C%8B%E5%92%8C%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text">2.文件查看和编辑命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-cat%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1  cat命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-less%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 less命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-head%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 head命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-tail%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 tail命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E5%92%8C%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.</span> <span class="nav-text">3.系统信息和进程管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-uname%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 uname命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-top%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 top命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-ps%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3  ps命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-kill%E5%91%BD%E4%BB%A4"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.4  kill命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%94%A8%E6%88%B7%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4"><span class="nav-number">1.4.</span> <span class="nav-text">4.用户和权限管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yolo_yi"
+      src="/images/GBcAqAQaMAACZ27(1).jpg">
+  <p class="site-author-name" itemprop="name">yolo_yi</p>
+  <div class="site-description" itemprop="description">不会飞的猪，就只是猪而已</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/25/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%8F%8Ashell%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/GBcAqAQaMAACZ27(1).jpg">
+      <meta itemprop="name" content="yolo_yi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yolo_yi' s blog">
+      <meta itemprop="description" content="不会飞的猪，就只是猪而已">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="'linux基础命令及shell使用' | yolo_yi' s blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          'linux基础命令及shell使用'
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-12-25 14:01:02" itemprop="dateCreated datePublished" datetime="2024-12-25T14:01:02+08:00">2024-12-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-12-26 11:01:03" itemprop="dateModified" datetime="2024-12-26T11:01:03+08:00">2024-12-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术.</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="linux基础命令及shell使用"><a href="#linux基础命令及shell使用" class="headerlink" title="linux基础命令及shell使用"></a>linux基础命令及shell使用</h1><h2 id="1-文件和目录操作命令"><a href="#1-文件和目录操作命令" class="headerlink" title="1.文件和目录操作命令"></a>1.文件和目录操作命令</h2><h3 id="1-1-ls命令"><a href="#1-1-ls命令" class="headerlink" title="1.1 ls命令"></a>1.1 ls命令</h3><p>用于列出目录的内容，包括文件和子目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l     <span class="comment">##以长格式显示文件和目录的详细信息,如文件类型、权限、硬链接数、所有者、组、大小、修改日期和文件名。</span></span><br><span class="line">   			“-” 表示普通文件，“d” 表示目录，“l” 表示符号链接</span><br><span class="line"><span class="built_in">ls</span> -a     <span class="comment">##显示所有文件，包括以 “.” 开头的隐藏文件</span></span><br><span class="line"><span class="built_in">ls</span> -h     <span class="comment">##与-l一起使用时，以人类可读的格式显示文件大小，如将字节数转换为 KB、MB、GB 等。</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="D:\software\Moonquake66\Moonquake66\source_posts\linux基础命令及shell使用.assets\image-20241225141506643.png" alt="image-20241225141506643"></p>
+<h3 id="1-2-cd命令（用于切换当前工作目录）"><a href="#1-2-cd命令（用于切换当前工作目录）" class="headerlink" title="1.2  cd命令（用于切换当前工作目录）"></a>1.2  cd命令（用于切换当前工作目录）</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/user  ##进入当前路径下的目录</span><br><span class="line">cd ..          ##返回上一级目录</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-3-pwd命令"><a href="#1-3-pwd命令" class="headerlink" title="1.3 pwd命令"></a>1.3 pwd命令</h3><p>打印当前工作目录的绝对路径。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@cp-service1-web1 test]# pwd</span><br><span class="line">/root/test</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-mkdir命令"><a href="#1-4-mkdir命令" class="headerlink" title="1.4  mkdir命令"></a>1.4  mkdir命令</h3><p>用于创建新的目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir project          ##创建一个名为project的新目录</span><br><span class="line">mkdir -p a/b/c 		   ##如果a和b目录不存在，会先创建a和b目录，然后在b目录下创建c目录。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-5-rmdir命令"><a href="#1-5-rmdir命令" class="headerlink" title="1.5 rmdir命令"></a>1.5 rmdir命令</h3><p>用于删除空目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rmdir test</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 会删除名为test空目录。如果目录非空，则会提示错误，需要先删除目录中的文件才能删除目录。</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-6-rm命令"><a href="#1-6-rm命令" class="headerlink" title="1.6 rm命令"></a>1.6 rm命令</h3><p>用于删除文件或目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -r   ##用于删除目录及其内容。会删除目录及其内部的所有文件和子目录</span><br><span class="line">rm -f   ##强制删除，不提示确认.即使文件是只读的也会强制删除</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-7-CP命令"><a href="#1-7-CP命令" class="headerlink" title="1.7 CP命令"></a>1.7 CP命令</h3><p>用于复制文件和目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp -r source destin  ##用于复制目录及其内容。例如：cp -r source_folder destination_folder会将source_folder目录及其内部的所有文件和子目录复制到destination_folder。如果destination_folder不存在，会创建该目录。</span><br><span class="line">cp -p file1 file2    ####保留文件的属性，如权限、所有者、时间戳等.例如：cp -p file1 file2会复制file1为file2，并且file2会保留file1的属性。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-8-mv命令"><a href="#1-8-mv命令" class="headerlink" title="1.8 mv命令"></a>1.8 mv命令</h3><p>用于移动或重命名文件和目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv file1 new_location/file1：将file1移动到new_location目录下。</span><br><span class="line">mv old_name new_name：将文件或目录从old_name重命名为new_name。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-文件查看和编辑命令"><a href="#2-文件查看和编辑命令" class="headerlink" title="2.文件查看和编辑命令"></a>2.<strong>文件查看和编辑命令</strong></h2><h3 id="2-1-cat命令"><a href="#2-1-cat命令" class="headerlink" title="2.1  cat命令"></a>2.1  cat命令</h3><p>用于查看文件内容、连接文件并输出到标准输出。</p>
+<h3 id="2-2-less命令"><a href="#2-2-less命令" class="headerlink" title="2.2 less命令"></a>2.2 less命令</h3><p>用于分页查看文件内容，比<code>cat</code>命令更灵活，适合查看大型文件。</p>
+<h3 id="2-3-head命令"><a href="#2-3-head命令" class="headerlink" title="2.3 head命令"></a>2.3 head命令</h3><p>用于查看文件的开头部分内容。</p>
+<h3 id="2-4-tail命令"><a href="#2-4-tail命令" class="headerlink" title="2.4 tail命令"></a>2.4 tail命令</h3><p>用于查看文件的结尾部分内容。</p>
+<h2 id="3-系统信息和进程管理命令"><a href="#3-系统信息和进程管理命令" class="headerlink" title="3.系统信息和进程管理命令"></a>3.系统信息和进程管理命令</h2><h3 id="3-1-uname命令"><a href="#3-1-uname命令" class="headerlink" title="3.1 uname命令"></a>3.1 uname命令</h3><p>用于打印系统信息。</p>
+<p><code>-a</code>：打印所有系统信息，包括内核名称、主机名、内核版本、硬件平台等。<img src="/assets/image-20241225161827245.png" alt="image-20241225161827245"></p>
+<h3 id="3-2-top命令"><a href="#3-2-top命令" class="headerlink" title="3.2 top命令"></a>3.2 top命令</h3><p>动态显示系统中各个进程的资源占用情况，如 CPU 使用率、内存使用率等。</p>
+<p>按下 “q” 键退出<code>top</code>命令。</p>
+<p><img src="/assets/image-20241225162200919.png" alt="image-20241225162200919"></p>
+<h3 id="3-3-ps命令"><a href="#3-3-ps命令" class="headerlink" title="3.3  ps命令"></a>3.3  ps命令</h3><p>用于查看当前系统中的进程状态。</p>
+<p><code>-ef</code>：显示所有进程的详细信息，包括进程 ID（PID）、父进程 ID（PPID）、用户、CPU 使用率等。</p>
+<p><img src="/assets/image-20241225165332878.png" alt="image-20241225165332878"></p>
+<h3 id="3-4-kill命令"><a href="#3-4-kill命令" class="headerlink" title="3.4  kill命令"></a>3.4  kill命令</h3><p>用于终止进程。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kill PID</span><br><span class="line">kill -9 PID（-9表示强制终止）</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-用户和权限管理命令"><a href="#4-用户和权限管理命令" class="headerlink" title="4.用户和权限管理命令"></a>4.用户和权限管理命令</h2><h3 id="4-1"><a href="#4-1" class="headerlink" title="4.1"></a>4.1</h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/shell/" rel="tag"># shell</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/11/30/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%87%B3%E4%BA%91/" rel="prev" title="博客迁移至云">
+                  <i class="fa fa-angle-left"></i> 博客迁移至云
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">yolo_yi</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
