@@ -123,16 +123,16 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -149,6 +149,110 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/12/k8s%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B%E5%8F%8A%E8%BF%9B%E9%98%B6%E8%AF%BE%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/GBcAqAQaMAACZ27(1).jpg">
+      <meta itemprop="name" content="yolo_yi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yolo_yi' s blog">
+      <meta itemprop="description" content="不会飞的猪，就只是猪而已">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | yolo_yi' s blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/02/12/k8s%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B%E5%8F%8A%E8%BF%9B%E9%98%B6%E8%AF%BE%E7%A8%8B/" class="post-title-link" itemprop="url">k8s学习过程及进阶课程</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-02-12 14:11:02 / Modified: 14:14:45" itemprop="dateCreated datePublished" datetime="2025-02-12T14:11:02+08:00">2025-02-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/k8s/" itemprop="url" rel="index"><span itemprop="name">k8s</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="k8s学习过程及进阶课程"><a href="#k8s学习过程及进阶课程" class="headerlink" title="k8s学习过程及进阶课程"></a>k8s学习过程及进阶课程</h1><h3 id="1-核心知识清单"><a href="#1-核心知识清单" class="headerlink" title="1. 核心知识清单"></a><strong>1. 核心知识清单</strong></h3><ul>
+<li><strong>基础概念</strong>：Pod&#x2F;Deployment&#x2F;Service&#x2F;Namespace</li>
+<li><strong>网络</strong>：CNI&#x2F;Flannel&#x2F;Calico&#x2F;Ingress</li>
+<li><strong>存储</strong>：PV&#x2F;PVC&#x2F;StorageClass</li>
+<li><strong>运维工具</strong>：kubectl&#x2F;kubeadm&#x2F;Helm</li>
+</ul>
+<h3 id="2-推荐实战项目"><a href="#2-推荐实战项目" class="headerlink" title="2. 推荐实战项目"></a><strong>2. 推荐实战项目</strong></h3><ol>
+<li>部署有状态应用（如MySQL集群）</li>
+<li>配置HPA（Horizontal Pod Autoscaling）</li>
+<li>使用Helm部署Prometheus监控</li>
+<li>搭建GitOps流水线（ArgoCD）</li>
+</ol>
+<h3 id="3-常用命令速查"><a href="#3-常用命令速查" class="headerlink" title="3. 常用命令速查"></a><strong>3. 常用命令速查</strong></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看节点状态</span></span><br><span class="line">kubectl get nodes</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看Pod详情（含事件）</span></span><br><span class="line">kubectl describe pod &lt;pod-name&gt;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入Pod的Shell</span></span><br><span class="line">kubectl exec -it &lt;pod-name&gt; -- /bin/bash</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看日志</span></span><br><span class="line">kubectl logs &lt;pod-name&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-常见问题处理"><a href="#4-常见问题处理" class="headerlink" title="4.常见问题处理"></a><strong>4.常见问题处理</strong></h3><ul>
+<li><strong>节点无法加入集群</strong>：检查防火墙、kubelet状态、token是否过期。</li>
+<li><strong>Pod一直Pending</strong>：检查资源配额、存储声明是否满足。</li>
+<li><strong>网络不通</strong>：确认CNI插件（如Flannel）是否正常运行。</li>
+</ul>
+<h3 id="5-学习资源推荐"><a href="#5-学习资源推荐" class="headerlink" title="5.学习资源推荐"></a><strong>5.学习资源推荐</strong></h3><ul>
+<li><strong>官方文档</strong>：<a target="_blank" rel="noopener" href="https://kubernetes.io/docs/home/">Kubernetes Documentation</a></li>
+<li><strong>实战课程</strong>：<a target="_blank" rel="noopener" href="https://github.com/kelseyhightower/kubernetes-the-hard-way">Kubernetes the Hard Way</a></li>
+<li><strong>中文社区</strong>：<a target="_blank" rel="noopener" href="https://www.kubernetes.org.cn/">Kubernetes中文社区</a>****</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -188,7 +292,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2025-02-11 18:50:52 / Modified: 19:32:25" itemprop="dateCreated datePublished" datetime="2025-02-11T18:50:52+08:00">2025-02-11</time>
+      <time title="Created: 2025-02-11 18:50:52 / Modified: 21:56:18" itemprop="dateCreated datePublished" datetime="2025-02-11T18:50:52+08:00">2025-02-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
